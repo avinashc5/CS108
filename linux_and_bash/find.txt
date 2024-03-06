@@ -1,0 +1,14 @@
+$find 
+	gives the name of all the files and folders in the folder that you are in
+-i*
+	case insensitive
+-name
+	 gives all the files and folders with this name
+-type d
+	directories
+-type f
+	files
+-type c
+	characters
+-not (and then the options and expressions)
+	complement of find (and then the options and expressions)

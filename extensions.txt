@@ -1,0 +1,9 @@
+C/C++ Intellisense, debugging, and code browsing
+Code runner
+Docker
+Docker explorer
+Intellicode
+Intellicode API usage examples
+Live preview
+Live server
+
