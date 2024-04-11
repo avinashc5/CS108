@@ -6,4 +6,15 @@ Intellicode
 Intellicode API usage examples
 Live preview
 Live server
+Python
+Bash Beautify
+Bash debug
+Bash ide
+Bash snippets
+Latex
+Latex workshop
+pylance
+python debugger
+shell format
+shellcheck
 
