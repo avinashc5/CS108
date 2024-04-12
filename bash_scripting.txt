@@ -1,0 +1,75 @@
+Shebang
+#!/bin/bash : absolute path to bash
+#!/usr/bin/env bash : env will find the path of bash; better because this works for all devices because bash might not be present at the same location in every device
+# : used for commenting
+
+Everytime we create a .sh file it needs to be made executable by chmod
+No declaration of variables is required
+Bash variables are character strings (i.e variables dont have a type) , but, depending on context permits integer operations
+While defining the variables '=' is used and no space before and after '='
+Variable names can contain digits, letters and underscore
+Variable names start with letters or underscore
+Value can be used with the expression $s
+Special characters need escaping with backslash (\)
+
+Single and double quotes help grouping arguments with spaces
+Single quotes ('') : preserve the literal value of each character
+Double quotes ("") : preserve the literal value of all characters except $ ` \
+
+# Environment variables
+SHELL : What shell you are running (sh, ksh, bash)
+USER : username of the current user
+PWD : present working directory
+PATH : specifies the directories to be searched to find a command
+'env' command shows the list of all these variables
+
+# Arithmetic Expressions
+let : a built-in command for evaluating expressions
+usage: let "x=1" or let "a=a+1"
+$((expression)), $[expression], 'declare i' and bc are a few other options
+
+# if-then-else
+if [ condition ]; then
+	statements
+elif [ condition ]; then
+	statements
+else
+	statements
+fi
+
+# for
+for item in [list]
+do
+	commands
+done
+
+# while
+while [ condition ]; do
+	statements
+done
+
+# until
+until [ condition ]; do
+	statements
+done
+ 
+# Comparisons
+-lt <
+-gt > 
+-le <=
+-ge >=
+-eq ==
+-ne !=
+
+Command line arguments and other special shell variables
+$0 : Name of the current shell script
+$1-$9 : Positional parameters 1 to 9
+$# : The number of positional parameters
+$* : All positional parameters
+"$*" : All postional parameters as a string
+$@ : All positional parameters
+"$@" : All positional parameters as a list of strings
+$? : Returns the status of most recently executed command
+$$ : Process id of the current process
+
+
