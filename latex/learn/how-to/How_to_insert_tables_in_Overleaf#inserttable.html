@@ -1,0 +1,616 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:14:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>How to insert tables in Overleaf - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="How to insert tables in Overleaf"><meta name="og:title" content="How to insert tables in Overleaf"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="../../favicon.ico"><link rel="icon" sizes="192x192" href="../../touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png"><link rel="mask-icon" href="../../mask-favicon.svg" color="#138A07"><link rel="canonical" href="How_to_insert_tables_in_Overleaf%23inserttable.html"><link rel="stylesheet" href="https://cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="How_to_insert_tables_in_Overleaf%23inserttable.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" hreflang="ja"><link rel="preload" href="https://cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="uFaKN8Q0kDE3DZOem7LSag=="><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="fK73c77y-mJ-LAwnqVdslBRUOExtFN9Xhuf0"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../about/features-overview.html" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="../../for/enterprises.html" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="../../for/universities.html" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="../../for/publishers.html" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="../../for/edu.html" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="../../latex/templates.html" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="../../user/subscription/plans.html" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../about/why-latex.html" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="../../register.html" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable&quot;}">Sign up</a></li><!-- login link--><li><a href="../../login.html" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>How to insert tables in Overleaf</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><h2><span class="mw-headline" id="About_this_article">About this article</span></h2>
+<p>This article explains how to create and edit tables using <b>Visual Editor</b>, which is one way to produce tables in Overleaf. In practice, there are three options to create tables:</p>
+<ol>
+<li>Using the <a href="#Using_Insert_Table_to_create_a_table_in_your_project"><strong>Insert Table</strong> button</a> in the <b>Visual Editor</b> (or <b>Code Editor</b>) toolbar.
+</li><li><a href="How_to_paste_formatted_content_into_Overleaf%23pastingtables.html" title="Kb/How to paste formatted content into Overleaf">Copying and pasting a table</a> from another document while using <strong>Visual Editor</strong>.
+</li><li>Writing the <a rel="nofollow" class="external text" href="../latex/Tables.html">LaTeX code for the table</a> in <strong>Code Editor</strong>.</li>
+</ol>
+<p>If you’re a confident LaTeX user you'll likely use option 3, which offers the most flexibility for creating tables. If you’re new to LaTeX, using the toolbar in <strong>Visual Editor </strong>(option 1) is a great way to get started and is the focus of this article—you can switch between <strong>Visual Editor </strong>and <strong>Code Editor</strong> to see the code behind the table. As you gain experience, take a look at our detailed guidance on <a rel="nofollow" class="external text" href="../latex/Tables.html">how to create tables using LaTeX</a>.</p>
+<h3><span class="mw-headline" id="Contents">Contents</span></h3>
+<p>Here are the main topics covered in this article.
+</p>
+<ul><li><a href="#Using_Insert_Table_to_create_a_table_in_your_project">Using Insert Table to create a table in your project</a></li>
+<li><a href="#How_to_edit_or_customize_an_inserted_table">How to edit or customize an inserted table</a></li>
+<li><a href="#How_to_edit_table_cells">How to edit table cells</a></li>
+<li><a href="#How_to_select_one_or_more_columns_or_rows">How to select one or more columns or rows</a></li>
+<li><a href="#How_to_change_the_table_caption">How to change the table caption</a></li>
+<li><a href="#How_to_add_borders_to_table_cells">How to add borders to table cells</a></li>
+<li><a href="#How_to_change_the_table’s_label">How to change the table’s label</a></li>
+<li><a href="#How_to_change_the_alignment_of_a_table_column">How to change the alignment of a table column</a></li>
+<li><a href="#How_to_set_the_width_of_table_columns">How to set the width of table columns</a></li>
+<li><a href="#How_to_change_the_alignment_of_a_table_cell">How to change the alignment of a table cell</a></li>
+<li><a href="#How_to_merge_(or_unmerge)_table_cells">How to merge (or unmerge) table cells</a></li>
+<li><a href="#How_to_delete_a_table_row_or_column">How to delete a table row or column</a></li>
+<li><a href="#How_to_add_new_rows_or_columns">How to add new rows or columns</a></li>
+<li><a href="#FAQs_about_tables_in_Visual_Editor">FAQs about tables in Visual Editor</a></li></ul>
+<h2><span class="mw-headline" id="Using_Insert_Table_to_create_a_table_in_your_project"><span id="inserttable"></span>Using <b>Insert Table</b> to create a table in your project</span></h2>
+<p><em>Please note: this feature is new and more functionality is planned, so keep checking back to this page to see what else is added. We’d also love your feedback on it, which you can provide in <a rel="nofollow" class="external text" href="https://forms.gle/TYSftBB3dhrjtgFU9">this survey</a>.</em></p>
+<ol>
+<li>Switch to <strong>Visual Editor </strong>using the toggle above the editor pane (or remain in <strong>Code Editor</strong> if you are comfortable editing LaTeX code).</li>
+<li>Select the <strong>Insert table</strong> button (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/6/62/InsertTableButton.png" decoding="async" width="25" height="23" />) on the toolbar.</li> 
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2f/InsertTableToolbarRev.png" decoding="async" width="557" height="82" /></p><li>Using the pop-up selector, highlight the required number of rows and columns, then click the bottom-right selected cell to insert an empty table. Here, we insert a blank 3 x 3 table:</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a6/InsertTableSelector.png" decoding="async" width="179" height="196" /></p>
+<p>This short video clip shows a 3 × 3 table being added to a project.</p>
+<p class="mw-empty-elt">
+</p><div style="max-width:800px">
+<video controls width="100%" height="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/7F9YTneTbxZAkAoN5vH3oK/7f157cd637b9aca5827beb52cecbb645/TestingTableGenerator.mp4" type="video/mp4">
+</video>
+</div>
+<p class="mw-empty-elt"></p>
+<li>The empty table is now ready for you to edit. You can do this in<strong> Code Editor </strong>if you’re comfortable with LaTeX table code, or continue with <strong>Visual Editor</strong>, which provides additional table formatting functionality that’s currently unavailable in <strong>Code Editor</strong>.</li>
+</ol>
+<h2><span class="mw-headline" id="How_to_edit_or_customize_an_inserted_table"><span id="editable"></span>How to edit or customize an inserted table</span></h2>
+<h3><span class="mw-headline" id="Get_to_know_the_table_editor_menu">Get to know the table editor menu</span></h3>
+<p>In <strong>Visual Editor</strong>, select one or more of your table’s cells to display the table editor menu.</p>
+<p><img alt="Image showing the insert table menu" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2b/InsertTableMenuUpdated.png" decoding="async" width="591" height="44" />
+</p>
+<p>Some menu icons remain grayed out (inactive) until you select a suitable range of cells required to complete those actions. For example, you can only merge cells after you’ve selected two or more cells in a row.</p>
+<p>Here’s a short summary of the icons and drop-down menus.</p>
+<ul>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/05/InsertTableMenuCaption.png" decoding="async" width="163" height="46" /> Delete or move the table caption.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a4/InsertTableMenuBorders.png" decoding="async" width="150" height="47" /> Change the table borders.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d2/InsertTableMenuAlign.png" decoding="async" width="54" height="31" />Set the alignment of a column or merged cell.</li>
+
+<li><a href="../latex/File_InsertTableSetColumnWidth.html" class="image"><img alt="Icon for setting the table column width" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/16/InsertTableSetColumnWidth.png" decoding="async" width="50" height="23" /></a>Adjust column width.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/InsertTableMenuMerge.png" decoding="async" width="30" height="28" /> Merge cells in a row.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/10/InsertTableMenuDelRowCol.png" decoding="async" width="26" height="31" /> Delete rows or columns.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c1/InsertTableMenuInsRowCol.png" decoding="async" width="31" height="33" />Insert rows and columns. </li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a6/InsertTableMenuDelTable.png" decoding="async" width="32" height="40" />Delete the entire table. To restore an accidentally deleted table, use the <strong>Undo</strong> button (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/38/InsertTableUndo.png" decoding="async" width="29" height="25" />) on the toolbar located above the Visual Editor and Code Editor.</li>
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/77/InsertTableMenuHelp.png" decoding="async" width="31" height="30" />Get help.</li> 
+
+<li><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/9/9b/InsertTableMenuFeedback.png" decoding="async" width="31" height="31" />Send feedback to Overleaf.</li>
+</ul>
+<h2><span class="mw-headline" id="How_to_edit_table_cells">How to edit table cells</span></h2>
+<p>There are two ways to start editing a cell:</p>
+<ol>
+<li>Double-click on the cell you want to edit.</li>
+<li>Use the tab or arrow keys to navigate to a particular cell, then press Enter.</li>
+
+</ol>
+<p>Here are some tips for editing cell content using <strong>Visual Editor</strong>:</p>
+<ul>
+<li>Use LaTeX commands, not the toolbar, to apply bold or italic styles to cell text:</li> 
+<ul>
+<li>use <a rel="nofollow" class="external text" href="../latex/Bold%2c_italics_and_underlining%23Bold_text.html#Bold_text"><code>\textbf{...}</code></a> for <strong>bold</strong> text.</li> 
+ <li>use <a rel="nofollow" class="external text" href="../latex/Bold%2c_italics_and_underlining.html#Italicized_text"><code>\textit{...}</code></a> for <em>italic</em> text.</li>
+ <li>use <code>\textbf{... \textit{...}...}</code> for text in <strong><em>bold italic</em></strong>.</li>
+</ul>
+</ul>
+<ul>
+<li>Cells can contain <a rel="nofollow" class="external text" href="https://learn.overleaf.com/learn/Mathematical_expressions#Inline_math_mode">inline mathematics</a> via <code>\( ... \)</code>.</li>
+</ul>
+<p><strong>Visual Editor</strong> will preview the styled text and inline math.</p>
+<h4><span class="mw-headline" id="Example:_styled_text_and_math_in_table_cells">Example: styled text and math in table cells</span></h4>
+<p>The next screenshot shows <strong>Visual Editor</strong> previewing the following cell content</p>
+<ul>
+<li><code>\(\sqrt{a^2+b^2}\)</code></li>
+<li><code>\textbf{bold}, \textit{italic}, \textbf{\textit{bold italic}}</code></li>
+</ul>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/cd/InsertTableVEpreviewdemo.png" decoding="async" width="442" height="173" /></p>
+<h2><span class="mw-headline" id="How_to_select_one_or_more_columns_or_rows">How to select one or more columns or rows</span></h2>
+<ol>
+<li>Use the row or column selectors to select a particular row or column.</li>
+<li>Hold down the Shift key to select multiple rows or columns.</li>
+</ol>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/df/InsertTableSelectRowCol.png" decoding="async" width="390" height="185" /></p>
+<p>You can also select multiple rows or columns by clicking on (selecting) a cell and dragging the selection (mouse) pointer.</p>
+<h2><span class="mw-headline" id="How_to_change_the_table_caption">How to change the table caption</span></h2>
+<h3><span class="mw-headline" id="To_edit_the_caption_text">To edit the caption text</span></h3>
+<ol>
+<li>Click on the default caption text, which is the word <strong>Caption.</strong></li>
+
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/f9/InsertTableEditCaption.png" decoding="async" width="390" height="180" /></p>
+<li>The LaTeX <code>\caption</code> command is displayed.</li>
+<li>Add your preferred caption between the braces <code>{...}</code></li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2e/InsertTableCaptionEdited.png" decoding="async" width="377" height="193" /></p>
+</ol>
+<h3><span class="mw-headline" id="To_remove_the_caption_or_place_it_above_or_below_the_table">To remove the caption or place it above or below the table</span></h3>
+<ul>
+<li>Select any table cell to display the table editor menu.</li>
+<li>From the caption drop-down menu, select your preferred option:</li>
+
+<ul>
+<li><strong>No caption</strong>: Remove it. 
+</li><li><strong>Caption above</strong>: Place the caption above the table.</li>
+<li><strong>Caption below</strong>: Place the caption below the table.</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/53/InsertTableCaptionMenu.png" decoding="async" width="379" height="203" /></p>
+</ul>
+</ul>
+<ul>
+<li><strong>Note</strong>: The caption dropdown is disabled if the <a rel="nofollow" class="external text" href="../latex/Tables.html#Creating_a_simple_table_in_LaTeX"><code>tabular</code></a> <a href="../latex/Environments.html" title="Environments">environment</a> is not directly inside a <a rel="nofollow" class="external text" href="../latex/Tables.html#Positioning_tables"><code>table</code> environment</a>. This is demonstrated by the following example in which the <code>tabular</code> environment is directly inside a <code>center</code> environment.</li>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>hologo<span class="nb">}</span> <span class="c">% for the XeTeX logo</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lcc<span class="nb">}</span>
+<span class="k">\hline</span>
+    <span class="k">\TeX</span><span class="nb">{}</span> engine<span class="nb">&amp;</span>Year released<span class="nb">&amp;</span>Native UTF-8<span class="k">\\</span>
+<span class="k">\hline</span>
+    pdf<span class="k">\TeX</span><span class="nb">&amp;</span>1996<span class="nb">&amp;</span>No<span class="k">\\</span> 
+    <span class="k">\hologo</span><span class="nb">{</span>XeTeX<span class="nb">}&amp;</span>2004<span class="nb">&amp;</span>Yes<span class="k">\\</span> 
+    Lua<span class="k">\TeX</span><span class="nb">&amp;</span>2007<span class="nb">&amp;</span>Yes<span class="k">\\</span>
+    LuaHB<span class="k">\TeX</span><span class="nb">&amp;</span>2019<span class="nb">&amp;</span>Yes<span class="k">\\</span> 
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<a class="open-in-overleaf" target="_blank" href="../../docsdcbf.html?engine=pdflatex&amp;snip_name=A+tabular+not+immediately+inside+a+table&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bhologo%7D+%25+for+the+XeTeX+logo%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bcenter%7D%0A%5Cbegin%7Btabular%7D%7Blcc%7D%0A%5Chline%0A++++%5CTeX%7B%7D+engine%26Year+released%26Native+UTF-8%5C%5C%0A%5Chline%0A++++pdf%5CTeX%261996%26No%5C%5C+%0A++++%5Chologo%7BXeTeX%7D%262004%26Yes%5C%5C+%0A++++Lua%5CTeX%262007%26Yes%5C%5C%0A++++LuaHB%5CTeX%262019%26Yes%5C%5C+%0A%5Chline%0A%5Cend%7Btabular%7D%0A%5Cend%7Bcenter%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf and switch to Visual Editor.</a>
+<p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+</ul>
+<p>If you open the code above in Overleaf then switch to Visual Editor you’ll see the caption dropdown is greyed out (disabled):</p>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/81/InsertTableCaptionDisabled.png" decoding="async" width="450" height="218" /></p>
+<h2><span class="mw-headline" id="How_to_add_borders_to_table_cells">How to add borders to table cells</span></h2>
+<p>At the moment, <strong>Visual Editor</strong> provides basic support for borders, accessible from the borders drop-down menu which currently has two user-selectable options:</p>
+<ul>
+<li><strong>All borders</strong>: All cells have a border.
+</li> 
+<li><strong>No borders</strong>: No cells have a border.</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/05/InsertTableBordersOptions.png" decoding="async" width="217" height="178" /></p>
+</ul>
+<p>A table inserted from the toolbar starts with the <strong>No borders</strong> option. If you <a href="#Does_Visual_Editor_preview_borders_applied_using_LaTeX_code?">add borders using LaTeX code</a> the button will display <strong>Custom borders</strong>.</p>
+<h2><span id="How_to_change_the_table.E2.80.99s_label"></span><span class="mw-headline" id="How_to_change_the_table’s_label">How to change the table’s label</span></h2>
+<ol>
+
+<li>Click on the default label text <code>tab:my_label.</code>
+</li><li>The LaTeX <code>\label</code> command is displayed.
+</li><li>Add your preferred label between the braces {...}.</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/InsertTableLabelEdit.png" decoding="async" width="395" height="229" /></p>
+</ol>
+<p>The label text is an identifier used to reference this table elsewhere in your document. You can read more about using labels in our <a rel="nofollow" class="external text" href="../latex/Inserting_Images.html#Labels_and_cross-references">article on cross-referencing</a>.</p>
+<h2><span class="mw-headline" id="How_to_change_the_alignment_of_a_table_column">How to change the alignment of a table column</span></h2>
+<p>Table columns can be right-, left-, or center-aligned. Follow these steps to change a column’s alignment:</p>
+<ol>
+<li><a href="#How_to_select_one_or_more_columns_or_rows">Select the column(s)</a> whose alignment you want to change.
+</li><li>The alignment icon (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d2/InsertTableMenuAlign.png" decoding="async" width="40" height="23" />) becomes active.</li> 
+<li>Select the drop-down menu then choose the preferred alignment: left, centered, or right.</li>
+<li>The following screenshot shows how to right-align all cells in column 1 of a table:</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/01/InsertTableColumnAlignedRight.png" decoding="async" width="377" height="161" /></p>
+</ol>
+<h2><span class="mw-headline" id="How_to_set_the_width_of_table_columns">How to set the width of table columns</span></h2>
+<p>Changes made to table column width settings will affect the <i>typeset table</i> only, not the <i>preview</i> provided by <b>Visual Editor</b>. You need to recompile your document to see the result of any changes made to column widths.  
+</p><p>
+Follow these steps to set column width(s) to a fixed value, or allow the width(s) to vary according to the content in the column cells.</p><ol>
+<li><a href="#How_to_select_one_or_more_columns_or_rows">Select the column(s)</a> whose width you want to change. The column width icon (<a href="../latex/File_InsertTableSetColumnWidth.html" class="image"><img alt="Icon for setting the table column width" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/16/InsertTableSetColumnWidth.png" decoding="async" width="50" height="23" /></a>) is then enabled.</li>
+<li>Select the drop-down menu:</li>
+<p><img alt="Menu options showing the width options" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/b/b6/TableColumnWidthTypes.png" decoding="async" width="169" height="84" /></p>
+<li>Choose the preferred option for the selected column(s):</li>
+<ul>
+<li><strong>Stretch width to text:</strong> this option allows the typeset column width(s) to be determined by the amount of content contained in the column's cells; e.g., the width of typeset text or mathematics.</li>
+<li><strong>Fixed width, wrap text</strong>: sets the width of the column(s) to a fixed value which causes line breaking (text wrapping) within column cells. Selecting this option displays the <b>Set column width</b> window used to set fixed column width(s), as explained in the next section.</li>
+<p><img alt="Modal window used to set a fixed column width" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c0/SetTableColumnWidth.png" decoding="async" width="521" height="300" /></p>
+</ul>
+</ol>
+<h3><span class="mw-headline" id="How_to_set_a_fixed_column_width">How to set a fixed column width</span></h3>
+<p>The <b>Set column width</b> pop-up window provides a drop-down list containing three ways to set fixed columns-widths: 
+</p>
+<ul><li>As a percentage (<b>%</b>) of the current environment's line width: the table column widths might then vary according to where the table is used (see <a href="#Example:_using_percentage_of_line_width">example below</a>).</li>
+<li>Using explicit widths expressed in units of millimeters (mm), centimeters (cm), <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Inch">inches</a> (in) or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Point_(typography)">points</a> (pt).</li>
+<li>A <b>Custom</b> option using LaTeX commands to calculate the width (<a href="#Example:_using_custom_commands">see example below</a>).</li></ul>
+<p>The following image shows how <b>Visual Editor</b> uses a small icon to indicate columns with a fixed width. You can edit the fixed-width setting by selecting (clicking) the icon to display the <b>Set column width</b> window.
+</p><p><img alt="Image showing how Visual Editor highlights fixed width columns" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/ff/VisualEditorFixedWidth2.png" decoding="async" width="633" height="169" />
+</p>
+<h3><span class="mw-headline" id="Example:_using_percentage_of_line_width">Example: using percentage of line width</span></h3>
+<p>The LaTeX command <code>\linewidth</code> holds the value of the current line width, which varies based on the document format, such as single-column or double-column layouts. Additionally, the value of <code>\linewidth</code> can change in specific environments, e.g., within a <code>minipage</code>. 
+</p><p>This example uses the <code>multicol</code> package to typeset two identical tables with column widths set to <code>0.25\linewidth</code>. One table is typeset in a single-column section, the other in a two-column section, demonstrating how changes to <code>\linewidth</code> affects the table column widths. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>array<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>multicol<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Section with a single column<span class="nb">}</span>
+This part of the page is a single column with <span class="k">\verb</span>|<span class="k">\linewidth</span>|=<span class="k">\the\linewidth</span>.<span class="k">\vskip</span>12pt 
+
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|p<span class="nb">{</span>0.25<span class="k">\linewidth</span><span class="nb">}</span>|p<span class="nb">{</span>0.25<span class="k">\linewidth</span><span class="nb">}</span>|<span class="nb">}</span>
+<span class="k">\hline</span>
+A <span class="nb">&amp;</span> B<span class="k">\\</span>
+<span class="k">\hline</span>
+C <span class="nb">&amp;</span> D <span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+
+<span class="k">\vskip</span>12pt <span class="k">\noindent</span> We now typeset the same table in a two-column section.
+<span class="k">\begin</span><span class="nb">{</span>multicols<span class="nb">}{</span>2<span class="nb">}</span>
+[
+<span class="k">\section</span><span class="nb">{</span>Section with two columns<span class="nb">}</span>
+]
+Here, <span class="k">\verb</span>|<span class="k">\linewidth</span>|=<span class="k">\the\linewidth</span>. The table column widths are smaller.
+
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|p<span class="nb">{</span>0.25<span class="k">\linewidth</span><span class="nb">}</span>|p<span class="nb">{</span>0.25<span class="k">\linewidth</span><span class="nb">}</span>|<span class="nb">}</span>
+<span class="k">\hline</span>
+A <span class="nb">&amp;</span> B<span class="k">\\</span>
+<span class="k">\hline</span>
+C <span class="nb">&amp;</span> D <span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>multicols<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+line+width+to+set+table+column+widths
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Barray%7D%0A%5Cusepackage%7Bmulticol%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BSection+with+a+single+column%7D%0AThis+part+of+the+page+is+a+single+column+with+%5Cverb%7C%5Clinewidth%7C%3D%5Cthe%5Clinewidth.%5Cvskip12pt+%0A%0A%5Cbegin%7Btabular%7D%7B%7Cp%7B0.25%5Clinewidth%7D%7Cp%7B0.25%5Clinewidth%7D%7C%7D%0A%5Chline%0AA+%26+B%5C%5C%0A%5Chline%0AC+%26+D+%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%0A%5Cvskip12pt+%5Cnoindent+We+now+typeset+the+same+table+in+a+two-column+section.%0A%5Cbegin%7Bmulticols%7D%7B2%7D%0A%5B%0A%5Csection%7BSection+with+two+columns%7D%0A%5D%0AHere%2C+%5Cverb%7C%5Clinewidth%7C%3D%5Cthe%5Clinewidth.+The+table+column+widths+are+smaller.%0A%0A%5Cbegin%7Btabular%7D%7B%7Cp%7B0.25%5Clinewidth%7D%7Cp%7B0.25%5Clinewidth%7D%7C%7D%0A%5Chline%0AA+%26+B%5C%5C%0A%5Chline%0AC+%26+D+%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%5Cend%7Bmulticols%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf and switch to Visual Editor.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>This example produces the following output:</p>
+<p class="mw-empty-elt">
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/FUfxmX3jxQWl27px3uDYP/e58b5ab8cb682e896f16eb88a694a16d/TableColumnLinewidth.svg" alt="Example document" style="width:75%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Example:_using_custom_commands">Example: using custom commands</span></h3>
+<p>The <b>Custom</b> option lets you set column widths using a wider range of units including <a href="../latex/Lengths_in_LaTeX.html" title="Lengths in LaTeX"><code>em</code>, <code>ex</code> and <code>sp</code></a> together with LaTeX commands—provided those commands produce a valid width value in units LaTeX understands. 
+</p><p>The next example demonstrates just a few of the many ways you can use the <b>Custom</b> option to set column widths, including use of the units <code>em</code> and <code>ex</code>, simple arithmetic expressions and more advanced calculations using LaTeX commands. The<code>\dimexpr</code> ("dimension expression") command is used to perform arithmetic operations on LaTeX lengths (also called dimensions) using addition, subtraction, multiplication, or division. In essence,  <code>\dimexpr</code> enables use of dynamically-calculated lengths, including the width of table columns. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>array<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newdimen\mydim</span>
+<span class="k">\mydim</span>=1.25cm
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\Acol</span><span class="nb">}{</span><span class="k">\dimexpr</span> 1cm + 0.1in + 3pt + 2.5mm<span class="k">\relax</span><span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\Bcol</span><span class="nb">}{</span>0.1<span class="k">\linewidth</span><span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span> Width of column 1: 4em=<span class="k">\the\dimexpr</span> 4em<span class="k">\relax</span>
+    <span class="k">\item</span> Width of column 2: 3ex=<span class="k">\the\dimexpr</span> 3ex<span class="k">\relax</span>
+    <span class="k">\item</span> Width of column 3: <span class="k">\verb</span>|<span class="k">\Acol</span>| sets a width of <span class="k">\the\dimexpr</span> 1cm + 0.1in + 3pt + 2.5mm<span class="k">\relax</span>
+    <span class="k">\item</span> Width of column 4: <span class="k">\verb</span>|<span class="k">\Bcol</span>| sets a width of <span class="k">\the\dimexpr</span>0.1<span class="k">\linewidth\relax</span>
+    <span class="k">\item</span> Width of column 5: <span class="k">\verb</span>|<span class="k">\dimexpr</span>0.25<span class="k">\linewidth</span>+2cm-<span class="k">\mydim\relax</span>| sets a width of <span class="k">\the\dimexpr</span>0.2<span class="k">\linewidth</span>+2cm-<span class="k">\mydim\relax</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\centering</span>
+<span class="k">\caption</span><span class="nb">{</span>Using <span class="k">\LaTeX</span><span class="nb">{}</span> commands and units to set column widths<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|p<span class="nb">{</span>4em<span class="nb">}</span>|p<span class="nb">{</span>3ex<span class="nb">}</span>|p<span class="nb">{</span><span class="k">\Acol</span><span class="nb">}</span>|p<span class="nb">{</span><span class="k">\Bcol</span><span class="nb">}</span>|p<span class="nb">{</span><span class="k">\dimexpr</span>0.2<span class="k">\linewidth</span>+2cm-<span class="k">\mydim\relax</span><span class="nb">}</span>|<span class="nb">}</span>
+<span class="k">\hline</span>
+A <span class="nb">&amp;</span> B <span class="nb">&amp;</span>C <span class="nb">&amp;</span> D<span class="nb">&amp;</span>E<span class="k">\\</span>
+<span class="k">\hline</span>
+F<span class="nb">&amp;</span> G<span class="nb">&amp;</span>H<span class="nb">&amp;</span> I<span class="nb">&amp;</span>J<span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+LaTeX+commands+to+set+table+column+widths
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Barray%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewdimen%5Cmydim%0A%5Cmydim%3D1.25cm%0A%5Cnewcommand%7B%5CAcol%7D%7B%5Cdimexpr+1cm+%2B+0.1in+%2B+3pt+%2B+2.5mm%5Crelax%7D%0A%5Cnewcommand%7B%5CBcol%7D%7B0.1%5Clinewidth%7D%0A%0A%5Cbegin%7Bitemize%7D%0A++++%5Citem+Width+of+column+1%3A+4em%3D%5Cthe%5Cdimexpr+4em%5Crelax%0A++++%5Citem+Width+of+column+2%3A+3ex%3D%5Cthe%5Cdimexpr+3ex%5Crelax%0A++++%5Citem+Width+of+column+3%3A+%5Cverb%7C%5CAcol%7C+sets+a+width+of+%5Cthe%5Cdimexpr+1cm+%2B+0.1in+%2B+3pt+%2B+2.5mm%5Crelax%0A++++%5Citem+Width+of+column+4%3A+%5Cverb%7C%5CBcol%7C+sets+a+width+of+%5Cthe%5Cdimexpr0.1%5Clinewidth%5Crelax%0A++++%5Citem+Width+of+column+5%3A+%5Cverb%7C%5Cdimexpr0.25%5Clinewidth%2B2cm-%5Cmydim%5Crelax%7C+sets+a+width+of+%5Cthe%5Cdimexpr0.2%5Clinewidth%2B2cm-%5Cmydim%5Crelax%0A%5Cend%7Bitemize%7D%0A%0A%5Cbegin%7Btable%7D%0A%5Ccentering%0A%5Ccaption%7BUsing+%5CLaTeX%7B%7D+commands+and+units+to+set+column+widths%7D%0A%5Cbegin%7Btabular%7D%7B%7Cp%7B4em%7D%7Cp%7B3ex%7D%7Cp%7B%5CAcol%7D%7Cp%7B%5CBcol%7D%7Cp%7B%5Cdimexpr0.2%5Clinewidth%2B2cm-%5Cmydim%5Crelax%7D%7C%7D%0A%5Chline%0AA+%26+B+%26C+%26+D%26E%5C%5C%0A%5Chline%0AF%26+G%26H%26+I%26J%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%5Cend%7Btable%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf and switch to Visual Editor.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>This example produces the following output:</p>
+<p class="mw-empty-elt">
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4ohiPSsrQygATCmjTNHhTO/cf26f735da7bc8fb63023a6e98e4501c/TableColumnCustom.svg" alt="Using LaTeX commands to set table column widths" style="width:75%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="How_to_change_the_alignment_of_a_table_cell">How to change the alignment of a table cell</span></h2>
+<ul>
+<li>The alignment of individual, <em>non-merged</em>, cells can’t be changed in <strong>Visual Editor</strong>.</li>
+<li>The content of <em>merged</em> cells can be aligned (see the section <a href="#Merging_two_or_more_cells_in_a_table_row">Merging two or more cells in a table row</a>).</li> 
+</ul>
+<h2><span id="How_to_merge_.28or_unmerge.29_table_cells"></span><span class="mw-headline" id="How_to_merge_(or_unmerge)_table_cells">How to merge (or unmerge) table cells</span></h2>
+<p>Table cells can be merged, horizontally, within a table <em>row</em>, but not vertically within a table column.</p>
+<h3><span class="mw-headline" id="Merging_two_or_more_cells_in_a_table_row">Merging two or more cells in a table row</span></h3>
+<ol>
+<li>Select the cells you want to merge.</li>
+<li>Select the <b>Merge cells</b> icon (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/InsertTableMenuMerge.png" decoding="async" width="24" height="23" />) to merge the cells.</li>
+<li>Optionally, you can change the alignment of the merged cells.</li>
+</ol>
+<h3><span class="mw-headline" id="Unmerging_two_or_more_merged_cells">Unmerging two or more merged cells</span></h3>
+<ol>
+<li>Select the merged cell.</li>
+<li>Select the <strong>Merge cells</strong> icon (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/InsertTableMenuMerge.png" decoding="async" width="24" height="23" />) to unmerge the cells.</li>
+</ol>
+<p>The following video demonstrates merging three cells in a table row, changing alignment of the merged cell and unmerging the cell content.</p>
+<p class="mw-empty-elt">
+</p><div style="max-width:800px">
+<video controls width="100%" height="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/2g1bZr5H5PdCBdrD6MqXPN/7813a6c42b2ecbd4ac7cbb4a412b863c/MergingCells.mp4" type="video/mp4">
+</video>
+</div>
+<ul>
+<li><strong>Note</strong>: All content contained in the merged cell is placed in the first cell of the unmerged set.</li>
+</ul>
+<h2><span class="mw-headline" id="How_to_delete_a_table_row_or_column">How to delete a table row or column</span></h2>
+<ol>
+<li><a href="#How_to_select_one_or_more_columns_or_rows">Select the rows or columns</a> you want to delete.</li>
+<li>Select the <strong>Delete row or column</strong> icon (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/10/InsertTableMenuDelRowCol.png" decoding="async" width="22" height="26" />) to delete the selected rows or columns.</li>
+</ol>
+<h2><span class="mw-headline" id="How_to_add_new_rows_or_columns">How to add new rows or columns</span></h2>
+<p>The <strong>Insert</strong> button (<img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c1/InsertTableMenuInsRowCol.png" decoding="async" width="23" height="24" />) lets you add one or more new rows or columns before or after a selected location. </p>
+<p>If you want to insert <em>m</em> rows and <em>n</em> columns, select an <em>m</em> × <em>n</em> group of cells covering the locations where you want to insert those rows and columns.</p>
+<p><strong>Example</strong>: In the following screenshot, a 3 × 2 group of cells straddling 3 rows and 2 columns has been selected.</p>
+<ul>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4d/InsertTableRowColInsert.png" decoding="async" width="438" height="163" /></p>
+<li>Selecting <img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c1/InsertTableMenuInsRowCol.png" decoding="async" width="20" height="21" /> provides the following options:</li>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/13/InsertTableoptionsDisplayed.png" decoding="async" width="169" height="161" /></p>
+<li>You can now insert any of the following:</li>
+<ul>
+<li>2 columns to the left of column 1</li>
+<li>2 columns to the right of column 2</li>
+<li>3 rows above row 1</li> 
+<li>3 rows below row 3</li> 
+</ul>
+</ul>
+<h2><span class="mw-headline" id="FAQs_about_tables_in_Visual_Editor">FAQs about tables in <strong>Visual Editor</strong></span></h2>
+<h3><span id="What_if_I_want_more_formatting_options.3F"></span><span class="mw-headline" id="What_if_I_want_more_formatting_options?">What if I want more formatting options?</span></h3>
+<p>There are many ways to configure tables that aren’t yet possible using <strong>Visual Editor</strong> generated tables. For more complex formatting you’ll need to use LaTeX code. Read our detailed guidance on <a rel="nofollow" class="external text" href="../latex/Tables.html">how to create tables using LaTeX</a>.</p>
+<h3><span id="Can_the_Visual_Editor_preview_tables_I_create_using_the_Code_Editor.3F"></span><span class="mw-headline" id="Can_the_Visual_Editor_preview_tables_I_create_using_the_Code_Editor?">Can the <b>Visual Editor</b> preview tables I create using the <b>Code Editor</b>?</span></h3>
+<p>It depends on the table and its code, but the <b>Visual Editor</b> will try to preview as much as possible. Complex tables, such as those created using LaTeX packages, journal article templates, or custom user commands (macros), may be partially, or entirely displayed as LaTeX code when viewed in the <b>Visual Editor</b>.</p>
+<p>If the table cannot be previewed, e.g., it contains LaTeX markup errors, you will see the following message:</p>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/44/InsertTableCannotPreview.png" decoding="async" width="394" height="111" /></p>
+<h3><span id="Does_Visual_Editor_support_the_booktabs_package.3F"></span><span class="mw-headline" id="Does_Visual_Editor_support_the_booktabs_package?">Does <strong>Visual Editor</strong> support the <code>booktabs</code> package?</span></h3>
+<p><strong>Visual Editor </strong>has some support for horizontal rules provided by the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/booktabs?lang=en"><code>booktabs</code> package</a>. The following example uses the <code>booktabs</code> package commands <code>\toprule</code>, <code>\midrule</code>, and <code>\bottomrule</code>.</p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>hologo<span class="nb">}</span> <span class="c">% for the XeTeX logo</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lcc<span class="nb">}</span>
+<span class="k">\toprule</span> 
+    <span class="k">\TeX</span><span class="nb">{}</span> engine<span class="nb">&amp;</span>Year released<span class="nb">&amp;</span>Native UTF-8<span class="k">\\</span>
+<span class="k">\midrule</span> 
+    pdf<span class="k">\TeX</span><span class="nb">&amp;</span>1996<span class="nb">&amp;</span>No<span class="k">\\</span> 
+    <span class="k">\hologo</span><span class="nb">{</span>XeTeX<span class="nb">}&amp;</span>2004<span class="nb">&amp;</span>Yes<span class="k">\\</span> 
+    Lua<span class="k">\TeX</span><span class="nb">&amp;</span>2007<span class="nb">&amp;</span>Yes<span class="k">\\</span>
+    LuaHB<span class="k">\TeX</span><span class="nb">&amp;</span>2019<span class="nb">&amp;</span>Yes<span class="k">\\</span> 
+<span class="k">\bottomrule</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="../../docs545b.html?engine=pdflatex&amp;snip_name=Previewing+a+booktabs+table+in+Visual+Editor&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bbooktabs%7D%0A%5Cusepackage%7Bhologo%7D+%25+for+the+XeTeX+logo%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btable%7D%0A%5Cbegin%7Btabular%7D%7Blcc%7D%0A%5Ctoprule+%0A++++%5CTeX%7B%7D+engine%26Year+released%26Native+UTF-8%5C%5C%0A%5Cmidrule+%0A++++pdf%5CTeX%261996%26No%5C%5C+%0A++++%5Chologo%7BXeTeX%7D%262004%26Yes%5C%5C+%0A++++Lua%5CTeX%262007%26Yes%5C%5C%0A++++LuaHB%5CTeX%262019%26Yes%5C%5C+%0A%5Cbottomrule%0A%5Cend%7Btabular%7D%0A%5Cend%7Btable%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf and switch to Visual Editor.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>Open the code above, then switch to <strong>Visual Editor</strong> to see the following preview:</p>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/39/InsertTableBooktabsDemo.png" decoding="async" width="447" height="175" /></p>
+<h3><span id="Does_Visual_Editor_preview_borders_applied_using_LaTeX_code.3F"></span><span class="mw-headline" id="Does_Visual_Editor_preview_borders_applied_using_LaTeX_code?">Does <strong>Visual Editor</strong> preview borders applied using LaTeX code?</span></h3>
+<p>Borders created within the tabular environment using <code>|</code> in the table’s specification, or <code>\hline</code> in the table body will be previewed in <strong>Visual Editor</strong>, as demonstrated by the next example.</p>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\centering</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>c|c|c<span class="nb">}</span>
+         R1C1<span class="nb">&amp;</span>R1C2<span class="nb">&amp;</span> <span class="k">\\</span>
+         <span class="k">\hline</span>
+         R2C1<span class="nb">&amp;</span>  <span class="nb">&amp;</span> <span class="k">\\</span>
+         <span class="k">\hline</span>
+         R3C1 <span class="nb">&amp;</span>R3C2 <span class="nb">&amp;</span>R3C3<span class="k">\\</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>This is my table caption.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>tab:mynewtable<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="../../docse533.html?engine=pdflatex&amp;snip_name=Creating+table+borders+with+LaTeX+code&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btable%7D%0A%5Ccentering%0A%5Cbegin%7Btabular%7D%7Bc%7Cc%7Cc%7D%0A+++++++++R1C1%26R1C2%26+%5C%5C%0A+++++++++%5Chline%0A+++++++++R2C1%26++%26+%5C%5C%0A+++++++++%5Chline%0A+++++++++R3C1+%26R3C2+%26R3C3%5C%5C%0A%5Cend%7Btabular%7D%0A++++%5Ccaption%7BThis+is+my+table+caption.%7D%0A++++%5Clabel%7Btab%3Amynewtable%7D%0A%5Cend%7Btable%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf and switch to Visual Editor.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>Open the code above, then switch to <strong>Visual Editor</strong> to see the following preview:</p>
+<p><img alt="&quot;&quot;" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d4/InsertTableLaTeXDisplayBorders.png" decoding="async" width="461" height="164" /></p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../latex/Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="Creating_a_document_in_Overleaf.html" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="Uploading_a_project.html" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="Copying_a_project.html" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="Creating_a_project_from_a_template.html" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="Using_the_Overleaf_project_menu.html" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="Including_images_on_Overleaf.html" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="Exporting_your_work_from_Overleaf.html" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="Working_Offline_in_Overleaf.html" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="Track_Changes_in_Overleaf.html" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="Using_bibliographies_on_Overleaf.html" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="Sharing_a_project.html" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../latex/Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="Fixing_and_preventing_compile_timeouts.html" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="../how-to.html" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="Overleaf_premium_features.html" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../latex/Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../latex/Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../latex/Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../latex/Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../latex/Lists.html" title="Lists">Lists</a></li>
+<li><a href="../latex/Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../latex/Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../latex/Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../latex/Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../latex/Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../latex/Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../latex/Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../latex/Operators.html" title="Operators">Operators</a></li>
+<li><a href="../latex/Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../latex/Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../latex/Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../latex/List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../latex/Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="Using_the_Symbol_Palette_in_Overleaf.html">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../latex/Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../latex/Tables.html" title="Tables">Tables</a></li>
+<li><a href="../latex/Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../latex/Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../latex/Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../latex/TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../latex/Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../latex/Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../latex/Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../latex/Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../latex/Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../latex/Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../latex/Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../latex/Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../latex/Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../latex/International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../latex/Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../latex/Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../latex/Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../latex/French.html" title="French">French</a></li>
+<li><a href="../latex/German.html" title="German">German</a></li>
+<li><a href="../latex/Greek.html" title="Greek">Greek</a></li>
+<li><a href="../latex/Italian.html" title="Italian">Italian</a></li>
+<li><a href="../latex/Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../latex/Korean.html" title="Korean">Korean</a></li>
+<li><a href="../latex/Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../latex/Russian.html" title="Russian">Russian</a></li>
+<li><a href="../latex/Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../latex/Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../latex/Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../latex/Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../latex/Indices.html" title="Indices">Indices</a></li>
+<li><a href="../latex/Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../latex/Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../latex/Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../latex/Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../latex/Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../latex/Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../latex/Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../latex/Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../latex/Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../latex/Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../latex/Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../latex/Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../latex/Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../latex/Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../latex/Counters.html" title="Counters">Counters</a></li>
+<li><a href="../latex/Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../latex/Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../latex/Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../latex/Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../latex/Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../latex/Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../latex/Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../latex/XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../latex/Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../latex/Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../latex/Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../latex/Commands.html" title="Commands">Commands</a></li>
+<li><a href="../latex/Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../latex/Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../latex/Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../latex/Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../latex/Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../latex/Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../latex/Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../latex/CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../latex/Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../latex/Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../latex/Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../latex/Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../latex/Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../latex/Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../latex/Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../latex/Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../latex/Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="../../about.html">About us</a></li><li><a href="../../about/values.html">Our values</a></li><li><a href="../../about/careers.html">Careers</a></li><li><a href="../../for/press.html">Press &amp; awards</a></li><li><a href="../../blog.html">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../latex/Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="../../latex/templates.html">Templates</a></li><li><a href="../../events/webinars.html">Webinars</a></li><li><a href="../latex/Tutorials.html">Tutorials</a></li><li><a href="../latex/Inserting_Images.html">How to insert images</a></li><li><a href="../latex/Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="Overleaf_premium_features.html">Premium features</a></li><li><a href="../../user/subscription/plansb6c4.html?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="../../for/enterprises.html">For enterprise</a></li><li><a href="../../for/universities.html">For universities</a></li><li><a href="../../user/subscription/plans388e.html?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="../../for/community/advisors.html">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="../../about/why-latex.html">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="../../contact.html">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="../../legal.html">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="How_to_insert_tables_in_Overleaf%23inserttable.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="../../legal.html#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="../how-to.html" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==" src="https://cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="uFaKN8Q0kDE3DZOem7LSag==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:15:02 GMT -->
+</html>

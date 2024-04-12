@@ -1,0 +1,709 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 12:35:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Cross referencing with the xr package in Overleaf - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Cross referencing with the xr package in Overleaf"><meta name="og:title" content="Cross referencing with the xr package in Overleaf"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="../../favicon.ico"><link rel="icon" sizes="192x192" href="../../touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="../../apple-touch-icon-precomposed.png"><link rel="mask-icon" href="../../mask-favicon.svg" color="#138A07"><link rel="canonical" href="Cross_referencing_with_the_xr_package_in_Overleaf.html"><link rel="stylesheet" href="https://cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Cross_referencing_with_the_xr_package_in_Overleaf.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" hreflang="ja"><link rel="preload" href="https://cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="KZI0cnK2Gjuyr6d9g+NoNg=="><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="vbKZhoF6-p0DFgFNiZJlYVXZDavlCUjhktEc"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../about/features-overview.html" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="../../for/enterprises.html" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="../../for/universities.html" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="../../for/publishers.html" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="../../for/edu.html" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="../../latex/templates.html" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="../../user/subscription/plans.html" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../about/why-latex.html" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="../../register.html" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf&quot;}">Sign up</a></li><!-- login link--><li><a href="../../login.html" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Cross referencing with the xr package in Overleaf</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p>This article explains, and demonstrates, the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xr?lang=en"><code>xr</code> package</a> which enables access to, and use of, cross-referencing labels present in external, <em>standalone</em>, LaTeX files. Here, we define a <em>standalone</em> LaTeX file as one which can be compiled because it contains a <code>\documentclass{...}</code> statement and the <code>\begin{document}...\end{document}</code> construct.
+</p><p>LaTeX files specifically written/structured to be included within a “container” document are not standalone because they cannot be compiled without being incorporated into another, suitable, file.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#When_should_I_use_the_xr_package?"><span class="tocnumber">1</span> <span class="toctext">When should I use the xr package?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Projects_where_the_xr_package_is_not_required"><span class="tocnumber">1.1</span> <span class="toctext">Projects where the xr package is not required</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Cross-referencing_101"><span class="tocnumber">1.1.1</span> <span class="toctext">Cross-referencing 101</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-4"><a href="#Projects_where_the_xr_package_is_required"><span class="tocnumber">1.2</span> <span class="toctext">Projects where the xr package is required</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#A_note_on_.aux_files"><span class="tocnumber">1.2.1</span> <span class="toctext">A note on .aux files</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#How_to_use_xr_on_Overleaf"><span class="tocnumber">2</span> <span class="toctext">How to use xr on Overleaf</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#The_files_used_in_our_example"><span class="tocnumber">2.1</span> <span class="toctext">The files used in our example</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Process_outline"><span class="tocnumber">2.2</span> <span class="toctext">Process outline</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Loading_the_xr_package"><span class="tocnumber">2.3</span> <span class="toctext">Loading the xr package</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#The_\externaldocument_command"><span class="tocnumber">2.3.1</span> <span class="toctext">The \externaldocument command</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#The_initial_files:_starting_points"><span class="tocnumber">2.4</span> <span class="toctext">The initial files: starting points</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#article1.tex"><span class="tocnumber">2.4.1</span> <span class="toctext">article1.tex</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#summary.tex"><span class="tocnumber">2.4.2</span> <span class="toctext">summary.tex</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Extra_code_for_summary.tex:_accessing_external_references"><span class="tocnumber">2.5</span> <span class="toctext">Extra code for summary.tex: accessing external references</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Specifying_the_external_document"><span class="tocnumber">2.5.1</span> <span class="toctext">Specifying the external document</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Creating_the_latexmkrc_file"><span class="tocnumber">2.6</span> <span class="toctext">Creating the latexmkrc file</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Code_for_latexmkrc"><span class="tocnumber">2.7</span> <span class="toctext">Code for latexmkrc</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#The_final_Overleaf_project_files"><span class="tocnumber">2.8</span> <span class="toctext">The final Overleaf project files</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#A_note_about_syntax_errors"><span class="tocnumber">3</span> <span class="toctext">A note about syntax errors</span></a></li>
+</ul>
+</div>
+
+<h2><span id="When_should_I_use_the_xr_package.3F"></span><span class="mw-headline" id="When_should_I_use_the_xr_package?">When should I use the <code>xr</code> package?</span></h2>
+<p>The following notes explain the types of projects that do, and do not, need to use the <code>xr</code> package.
+</p>
+<h3><span class="mw-headline" id="Projects_where_the_xr_package_is_not_required">Projects where the <code>xr</code> package is <em>not</em> required</span></h3>
+<p>Large LaTeX projects, such as books or long reports, are often split into a series of smaller <code>.tex</code> files; for example, one <code>.tex</code> file per book chapter. Typically, such book chapters are not standalone: you cannot compile individual chapters because they do not contain a <code>\documentclass{...}</code> statement or the <code>\begin{document}...\end{document}</code> construct. Those chapters are destined for <em>inclusion</em> into a “container” document which <em>can</em> be compiled. In those circumstances, cross-referencing to document elements—within any individual chapter file—can proceed as normal: you do not need to use the <code>xr</code> package.
+</p>
+<p>To explore an example of a large project you can <a class="open-in-overleaf" target="_blank" href="../../login878e.html?id=70769185&amp;templateName=Managing+a+large+project+on+Overleaf&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> open this example in Overleaf.</a>
+</p>
+<h4><span class="mw-headline" id="Cross-referencing_101">Cross-referencing 101</span></h4>
+<p>To cross-reference an item in a LaTeX document you need to:
+</p>
+<ol>
+<li>give it a unique identifier, <code>some_string</code>, using the <code>\label</code> command:</li>
+
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\label</span><span class="nb">{</span>some<span class="nb">_</span>string<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<li>then, at the location where you want to reference that element, you need to write</li>
+
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\ref</span><span class="nb">{</span>some<span class="nb">_</span>string<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</ol>
+<p>To be very brief, LaTeX manages cross-referencing by writing data to a file called <code>filename.aux</code> where <code>filename</code> is the name of the main <code>.tex</code> file being compiled. 
+</p><p>For the process to work, the LaTeX document has to be compiled at least twice: the first compilation <em>generates</em> the reference data—writing it to <code>filename.aux</code>. During the second compilation, LaTeX <em>reads</em> <code>filename.aux</code> to resolve the references, providing data to replace instances of <code>\ref{some_string}</code>.
+</p>
+<ul><li>For more detail on cross-referencing see the Overleaf article <a href="../latex/Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a>.</li></ul>
+<h3><span class="mw-headline" id="Projects_where_the_xr_package_is_required">Projects where the <code>xr</code> package is required</span></h3>
+<p>Suppose you have a set of fully-formed, standalone, LaTeX documents such as a collection of N articles: <code>article1.tex</code>, <code>article2.tex</code> ... <code>articleN.tex</code>. Each article can be compiled separately and it is likely they were written using a variety of document classes, packages etc.
+</p><p>Now imagine there’s a need to write another article, <code>summary.tex</code>, say, which has to reference sections, figures, tables etc contained within those individual, standalone, articles. The <code>xr</code> package let’s you do that: it enables <code>summary.tex</code> to reference labels generated by any of the standalone <code>article*.tex</code> papers.
+</p>
+<h4><span class="mw-headline" id="A_note_on_.aux_files">A note on <code>.aux</code> files</span></h4>
+<ul><li>Note, here we are using an asterisk (<code>*</code>) as a placeholder for any number from 1 to N.</li></ul>
+<p>Compiling any of the standalone files <code>article1.tex</code>, <code>article2.tex</code> ... <code>articleN.tex</code> causes LaTeX to generate a corresponding <code>article*.aux</code> (<strong><code>aux</code></strong>illary) file which, among other items, contains label data required to generate cross-references.
+</p><p>If any of the <code>article*.tex</code> files are edited, including changing, adding or removing labels (<code>\label{..}</code>), the corresponding <code>article*.tex</code> file(s) need to be recompiled, particularly if updated <code>article*.aux</code> file(s) are required. 
+</p><p>Detecting changes to <code>article*.tex</code>, and subsequently recompiling them, can be automated on Overleaf by using a suitable <code>latexmkrc</code> file.
+</p>
+<h2><span class="mw-headline" id="How_to_use_xr_on_Overleaf">How to use <code>xr</code> on Overleaf</span></h2>
+<p>We will follow our multiple article-file example to demonstrate using the <code>xr</code> package on Overleaf; in particular, we show how to automate the compilation process via a <code>latexmkrc</code> file. Our example is based on code contained in <a rel="nofollow" class="external text" href="http://tex.stackexchange.com/a/69832/226">an answer on tex.stackexchange</a>, written by a user called cyberSingularity, but uses a <code>latexmkrc</code> file <a href="#Code_for_latexmkrc">supplied to Overleaf by John Collins</a> (<a rel="nofollow" class="external text" href="https://ctan.org/pkg/latexmk?lang=en">maintainer of <code>latexmk</code></a>).
+</p>
+<h3><span class="mw-headline" id="The_files_used_in_our_example">The files used in our example</span></h3>
+<p>To streamline the example, our project contains just the following files:
+</p>
+<ul><li><code>article1.tex</code>: a single article which, internally, uses cross-references. We want to use those same references within the summary, <code>summary.tex</code>, which requires accessing reference data in the <code>article1.aux</code> file.</li>
+<li><code>summary.tex</code>: the document that needs to reference document elements, such as figures and sections, contained in <code>article1.tex</code>.</li>
+<li><code>latexmkrc</code>: contains code (Perl) to automate recompilation of <code>article1.tex</code> due to any changes made to it.</li></ul>
+<h3><span class="mw-headline" id="Process_outline">Process outline</span></h3>
+<ul><li>In our example, the file <code>article1.tex</code> is untouched, it is used as written or provided by the original author.</li>
+<li><code>summary.tex</code> loads the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xr?lang=en"><code>xr</code> package</a> and has some some additional LaTeX code which
+<ul><li>enables it to access reference data contained in <code>article1.aux</code>;</li>
+<li>enables <code>latexmkrc</code> to automatically recompile <code>article1.tex</code>, if required—e.g., if <code>article1.tex</code> is edited requiring an updated <code>article1.aux</code> file.</li></ul></li>
+<li>a <code>latexmkrc</code> file is written.</li></ul>
+<h3><span class="mw-headline" id="Loading_the_xr_package">Loading the xr package</span></h3>
+<p>The first step is to load the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xr?lang=en"><code>xr</code> package</a> in the main file you are working on. In this case, this simply means we include
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>xr<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>in the preamble of <code>summary.tex</code>.
+</p>
+<ul><li><strong>Note</strong>: If you’re using the <code>hyperref</code> package in your main file (<code>summary.tex</code>), then load <code>xr-hyper</code> instead of <code>xr</code> in <code>summary.tex</code> before <code>hyperref</code>. You’ll also need to load the <code>hyperref</code> package in the external document (i.e., <code>article1.tex</code>).</li></ul>
+<h4><span id="The_.5Cexternaldocument_command"></span><span class="mw-headline" id="The_\externaldocument_command">The <code>\externaldocument</code> command</span></h4>
+<p>The <code>xr</code> package provides the <code>\externaldocument</code> command which has the general form
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\externaldocument</span><span class="na">[prefix]</span><span class="nb">{</span>external<span class="nb">_</span>file<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>where the optional <code>[prefix]</code> is used to prevent duplicate labels. By way of example, if your main <code>.tex</code> file, e.g. <code>summary.tex</code>, and the external file, <code>article1.tex</code>, both contain <code>\label{eq:1}</code> you can avoid a name clash by writing 
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\externaldocument</span><span class="na">[art1-]</span><span class="nb">{</span>article1<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>in which case all references from <code>article1.tex</code> are prefixed by <code>art1-</code>. Now you can access <code>\label{eq:1}</code>, contained in <code>article1.tex</code>, by writing <code>\ref{art1-eq:1}</code> in <code>summary.tex</code>.
+</p>
+<h3><span class="mw-headline" id="The_initial_files:_starting_points">The initial files: starting points</span></h3>
+<p>We will use a very short <code>article1.tex</code> file which contains several cross-references—we want to use some of those references in <code>summary.tex</code>. 
+</p><p>Note the following: compiling <code>article1.tex</code> will use a file called <code>article1.aux</code> to write and read its cross-reference data, but compiling <code>summary.tex</code> uses <code>summary.aux</code> for the same purposes. Our goal is to enable <code>summary.tex</code> to read cross-reference data from one or more <em>external</em> <code>.aux</code> files;  here, one called <code>article1.aux</code>.
+</p>
+<h4><span class="mw-headline" id="article1.tex"><code>article1.tex</code></span></h4>
+<p>The following code can be opened in Overleaf using the link below the listing.
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>This is <span class="k">\texttt</span><span class="nb">{</span>article1.tex<span class="nb">}}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>introduction<span class="nb">}</span>
+
+This is a standalone <span class="k">\LaTeX</span><span class="nb">{}</span> document with
+references we want to use in <span class="k">\texttt</span><span class="nb">{</span>summary.tex<span class="nb">}</span>.
+
+<span class="k">\subsection</span><span class="nb">{</span>Math references<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>mathrefs<span class="nb">}</span>
+As mentioned in section <span class="k">\ref</span><span class="nb">{</span>introduction<span class="nb">}</span>, 
+different elements can be referenced within
+a document.
+
+<span class="k">\subsection</span><span class="nb">{</span>Powers series<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>powers<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:1<span class="nb">}</span>
+<span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span><span class="k">\infty</span><span class="nb">}</span> a<span class="nb">_</span>i x<span class="nb">^</span>i
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+Equation <span class="k">\ref</span><span class="nb">{</span>eq:1<span class="nb">}</span> is a typical power series.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>
+<a class="open-in-overleaf" target="_blank" href="../../docsf725.html?engine=%5B%5B%3ATemplate%3AEngine%5D%5D}&amp;snip_name[]=readme.txt&amp;snip[]=A+project+created+from+the+Overleaf+wiki&amp;snip_name[]=article1.tex&amp;main_document=article1.tex&amp;snip[]=%5Cdocumentclass%7Barticle%7D%0A%5Ctitle%7BThis+is+%5Ctexttt%7Barticle1.tex%7D%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BIntroduction%7D%0A%5Clabel%7Bintroduction%7D%0A%0AThis+is+a+standalone+%5CLaTeX%7B%7D+document+with%0Areferences+we+want+to+use+in+%5Ctexttt%7Bsummary.tex%7D.%0A%0A%5Csubsection%7BMath+references%7D%0A%5Clabel%7Bmathrefs%7D%0AAs+mentioned+in+section+%5Cref%7Bintroduction%7D%2C+%0Adifferent+elements+can+be+referenced+within%0Aa+document.%0A%0A%5Csubsection%7BPowers+series%7D%0A%5Clabel%7Bpowers%7D%0A%0A%5Cbegin%7Bequation%7D%0A%5Clabel%7Beq%3A1%7D%0A%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D+a_i+x%5Ei%0A%5Cend%7Bequation%7D%0A%0AEquation+%5Cref%7Beq%3A1%7D+is+a+typical+power+series.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open <code>article1.tex</code> in Overleaf</a>
+
+</p><p>Compiling <code>article1.tex</code> produces the following output:
+</p><p><img alt="Output produced by compiling article1.tex file on Overleaf" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/dc/Xrdemoarticle1b.png" decoding="async" width="600" height="288" />
+</p>
+<h4><span class="mw-headline" id="summary.tex"><code>summary.tex</code></span></h4>
+<p>Here is our initial, minimal, <code>summary.tex</code> file <strong><em>prior</em></strong> to adding the code required to access external cross-references created in <code>article1.tex</code>. 
+</p><p>Note that <code>summary.tex</code> does not contain any <code>\label{some_string}</code> commands that correspond to each <code>\ref{some_string}</code>. If we compile this version of <code>summary.tex</code> it will attempt to read reference data from <code>summary.aux</code> but, of course the required data is contained in the external <code>article1.aux</code> file which cannot, yet, be accessed.
+</p><p>Observe that the <code>xr</code> package is loaded but that alone is not enough to resolve the cross-references: additional code is required to access the external <code>article1.aux</code> file. 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xr<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>This is <span class="k">\texttt</span><span class="nb">{</span>summary.tex<span class="nb">}}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+In the file <span class="k">\texttt</span><span class="nb">{</span>article1.tex<span class="nb">}</span>, the introduction is section <span class="k">\ref</span><span class="nb">{</span>introduction<span class="nb">}</span>.  In that file, there are two subsections: <span class="k">\ref</span><span class="nb">{</span>mathrefs<span class="nb">}</span> and <span class="k">\ref</span><span class="nb">{</span>powers<span class="nb">}</span>. In subsection <span class="k">\ref</span><span class="nb">{</span>powers<span class="nb">}</span>, equation <span class="k">\ref</span><span class="nb">{</span>eq:1<span class="nb">}</span> demonstrates a power series.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>
+<a class="open-in-overleaf" target="_blank" href="../../docs9519.html?engine=%5B%5B%3ATemplate%3AEngine%5D%5D}&amp;snip_name[]=readme.txt&amp;snip[]=A+project+created+from+the+Overleaf+wiki&amp;snip_name[]=summary.tex&amp;main_document=summary.tex&amp;snip[]=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxr%7D%0A%5Ctitle%7BThis+is+%5Ctexttt%7Bsummary.tex%7D%7D%0A%5Cbegin%7Bdocument%7D%0A%0AIn+the+file+%5Ctexttt%7Barticle1.tex%7D%2C+the+introduction+is+section+%5Cref%7Bintroduction%7D.++In+that+file%2C+there+are+two+subsections%3A+%5Cref%7Bmathrefs%7D+and+%5Cref%7Bpowers%7D.+In+subsection+%5Cref%7Bpowers%7D%2C+equation+%5Cref%7Beq%3A1%7D+demonstrates+a+power+series.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <em>incomplete</em> <code>summary.tex</code> in Overleaf</a>
+
+</p><p>Compiling this incomplete <code>summary.tex</code> file produces the following output, with double question marks showing undefined references:
+</p><p><img alt="Image showing reporting missing references" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/12/MissingRefsTypeset3.png" decoding="async" width="600" height="67" />
+</p><p>Overleaf reports the undefined references:
+</p><p><img alt="Image showing Overleaf reporting missing references" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/6/62/MissingRefsOverleaf3.png" decoding="async" width="800" height="412" />
+</p>
+<h3><span class="mw-headline" id="Extra_code_for_summary.tex:_accessing_external_references">Extra code for <code>summary.tex</code>: accessing external references</span></h3>
+<p>The following code creates the <code>\myexternaldocument{...}</code> which allows you to specify the external document whose labels you would like to reference from within <code>summary.tex</code>.
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\makeatletter</span>
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\addFileDependency</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">% argument=file name and extension</span>
+<span class="k">\typeout</span><span class="nb">{</span>(#1)<span class="nb">}</span><span class="c">% latexmk will find this if $recorder=0</span>
+<span class="c">% however, in that case, it will ignore #1 if it is a .aux or </span>
+<span class="c">% .pdf file etc and it exists! If it doesn't exist, it will appear </span>
+<span class="c">% in the list of dependents regardless)</span>
+<span class="c">%</span>
+<span class="c">% Write the following if you want it to appear in \listfiles </span>
+<span class="c">% --- although not really necessary and latexmk doesn't use this</span>
+<span class="c">%</span>
+<span class="k">\@</span>addtofilelist<span class="nb">{</span>#1<span class="nb">}</span>
+<span class="c">%</span>
+<span class="c">% latexmk will find this message if #1 doesn't exist (yet)</span>
+<span class="k">\IfFileExists</span><span class="nb">{</span>#1<span class="nb">}{}{</span><span class="k">\typeout</span><span class="nb">{</span>No file #1.<span class="nb">}}</span>
+<span class="nb">}</span><span class="k">\makeatother</span>
+
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\myexternaldocument</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\externaldocument</span><span class="nb">{</span>#1<span class="nb">}</span><span class="c">%</span>
+<span class="k">\addFileDependency</span><span class="nb">{</span>#1.tex<span class="nb">}</span><span class="c">%</span>
+<span class="k">\addFileDependency</span><span class="nb">{</span>#1.aux<span class="nb">}</span><span class="c">%</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<h4><span class="mw-headline" id="Specifying_the_external_document">Specifying the external document</span></h4>
+<p>Once the helper code (above) is added to <code>summary.tex</code>, the next step is to specify the external document whose labels you would like to reference. This is the only part of the code you will have to change yourself depending on the name of the file.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\myexternaldocument</span><span class="nb">{</span>article1<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Here, <code>article1</code> can be replaced by any file whose labels you want to access—you can use multiple <code>\myexternaldocument</code> commands to access additional external files.
+</p>
+<h3><span class="mw-headline" id="Creating_the_latexmkrc_file">Creating the <code>latexmkrc</code> file</span></h3>
+<p>The next step is to create a <code>latexmkrc</code> file as shown below:
+</p>
+<ul><li>In your project editor window, select the <strong>New File</strong> icon at the top-left of the project window.</li>
+<li>Select <strong>New File</strong> from within the <strong>Add Files</strong> pop-up dialog box and name the file <code>latexmkrc</code>—note there is no file extension:</li></ul>
+<p><img alt="Creating a latexmkrc file in Overleaf" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/af/Makelatexmkrc3.png" decoding="async" width="600" height="225" />
+</p>
+<ul><li>Make sure that the <code>latexmkrc</code> file created and saved in the top (root) level of the project’s files area. That is, not inside any folders in the file tree.</li></ul>
+<h3><span class="mw-headline" id="Code_for_latexmkrc">Code for <code>latexmkrc</code></span></h3>
+<p>Overleaf are grateful to John Collins, <a rel="nofollow" class="external text" href="https://ctan.org/pkg/latexmk?lang=en">maintainer of <code>latexmk</code></a>, for contacting us to supply the following <code>latexmkrc</code> file, which we are delighted to publish in full—including the extremely helpful inline comments. 
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-perl mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># This shows how to use the xr package with latexmk.</span>
+<span class="c1"># John Collins 2023-03-29</span>
+<span class="c1">#</span>
+<span class="c1"># The xr package ("a system for eXternal References") is used by a document</span>
+<span class="c1"># to make references to sections, equations, etc in other external</span>
+<span class="c1"># documents. </span>
+<span class="c1"># The definitions in this file enable latexmk to apply latexmk to</span>
+<span class="c1"># automatically update an external document whenever its .tex file changes,</span>
+<span class="c1"># so that the references in the main document stay up to date.</span>
+
+<span class="c1"># Notes:</span>
+<span class="c1">#    1. This version is defined to put the files from the compilations of</span>
+<span class="c1">#       the external documents into a defined subdirectory, to segregate</span>
+<span class="c1">#       potentially many generated files from the main document</span>
+<span class="c1">#       directories. </span>
+<span class="c1">#    2. But for latexmk's custom dependency mechanism to be used, as here,</span>
+<span class="c1">#       the aux file from compilation of a subdocument must be generated in</span>
+<span class="c1">#       the same directory as the corresponding source .tex file.  So the</span>
+<span class="c1">#       .aux file is copied.</span>
+<span class="c1">#    3. It is assumed that the external documents are to be compiled by</span>
+<span class="c1">#       pdflatex.  This can be changed, of course, by changing the '-pdf'</span>
+<span class="c1">#       option given to the invoked latexmk to whatever is needed.</span>
+<span class="c1">#    4. An ideal implementation would also ensure that recompilation of an</span>
+<span class="c1">#       external document also happens whenever any of its other source</span>
+<span class="c1">#       files changes.  But this is not done in the present version, and</span>
+<span class="c1">#       would probably entail either the use of internal latexmk variables</span>
+<span class="c1">#       or extra enhancements to latexmk.</span>
+<span class="c1">#    5. The code uses subroutines copy and fileparse that are loaded by</span>
+<span class="c1">#       latexmk from the Perl packages File::Copy and File::Basename.</span>
+<span class="c1">#    6. It also uses some not-yet-documented features of latexmk: an array</span>
+<span class="c1">#       variable @file_not_found and subroutines popd, pushd, and</span>
+<span class="c1">#       rdb_add_generated. </span>
+
+
+<span class="c1">#--------------------</span>
+<span class="c1"># Configurable choices for compilation of external documents</span>
+
+<span class="c1"># Subdirectory for output files from compilation of external documents:</span>
+<span class="nv">$sub_doc_output</span> <span class="o">=</span> <span class="s">'output-subdoc'</span><span class="p">;</span>
+
+<span class="c1"># Options to supply to latexmk for compilation of external documents:</span>
+<span class="nv">@sub_doc_options</span> <span class="o">=</span> <span class="p">();</span>
+
+<span class="nb">push</span> <span class="nv">@sub_doc_options</span><span class="p">,</span> <span class="s">'-pdf'</span><span class="p">;</span> <span class="c1"># Use pdflatex for compilation of external documents.</span>
+<span class="c1"># Replace '-pdf' by '-pdfdvi', 'pdfxe', or 'pdflua' if needed.</span>
+
+<span class="c1">#--------------------</span>
+
+<span class="c1"># Add a pattern for xr's log-file message about missing files to latexmk's</span>
+<span class="c1"># list.  Latexmk's variable @file_not_found is not yet documented.</span>
+<span class="c1"># This line isn't necessary for v. 4.80 or later of latexmk.</span>
+<span class="nb">push</span> <span class="nv">@file_not_found</span><span class="p">,</span> <span class="s">'^No file\\s*(.+)\s*$'</span><span class="p">;</span>
+
+<span class="n">add_cus_dep</span><span class="p">(</span> <span class="s">'tex'</span><span class="p">,</span> <span class="s">'aux'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'makeexternaldocument'</span> <span class="p">);</span>
+<span class="k">sub</span> <span class="nf">makeexternaldocument</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nv">$root_filename</span> <span class="ow">ne</span> <span class="nv">$_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>  <span class="p">{</span>
+        <span class="k">my</span> <span class="p">(</span><span class="nv">$base_name</span><span class="p">,</span> <span class="nv">$path</span><span class="p">)</span> <span class="o">=</span> <span class="n">fileparse</span><span class="p">(</span> <span class="nv">$_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+        <span class="n">pushd</span> <span class="nv">$path</span><span class="p">;</span>
+        <span class="k">my</span> <span class="nv">$return</span> <span class="o">=</span> <span class="nb">system</span> <span class="s">"latexmk"</span><span class="p">,</span>
+                            <span class="nv">@sub_doc_options</span><span class="p">,</span>
+                            <span class="s">"-aux-directory=$sub_doc_output"</span><span class="p">,</span>
+                            <span class="s">"-output-directory=$sub_doc_output"</span><span class="p">,</span>
+                            <span class="nv">$base_name</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nv">$sub_doc_output</span> <span class="ow">ne</span> <span class="s">' '</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nv">$sub_doc_output</span> <span class="ow">ne</span> <span class="s">'.'</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+               <span class="c1"># In this case, .aux file generated by pdflatex isn't in same</span>
+               <span class="c1"># directory as the .tex file.</span>
+               <span class="c1"># Therefore:</span>
+               <span class="c1"># 1. Actual generated aux file must be listed as produced by this</span>
+               <span class="c1">#    rule, so that latexmk deals with dependencies correctly.</span>
+               <span class="c1">#    (Problem to overcome: If $sub_dir_output is same as $aux_dir</span>
+               <span class="c1">#    for the main document, xr may read the .aux file in the</span>
+               <span class="c1">#    aux_dir rather than the one the cus dep is assumed by latexmk</span>
+               <span class="c1">#    to produce, which is in the same directory as the .tex source</span>
+               <span class="c1">#    file for this custom dependency.)</span>
+               <span class="c1">#    Use not-yet-documented latexmk subroutine rdb_add_generated</span>
+               <span class="c1">#    to do this:</span>
+               <span class="c1"># 2. A copy of the .aux file must be in same directory as .tex file</span>
+               <span class="c1">#    to satisfy latexmk's definition of a custom dependency.</span>
+             <span class="n">rdb_add_generated</span><span class="p">(</span> <span class="s">"$sub_doc_output/$base_name.aux"</span> <span class="p">);</span>
+             <span class="n">copy</span> <span class="s">"$sub_doc_output/$base_name.aux"</span><span class="p">,</span> <span class="s">"."</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">popd</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nv">$return</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="The_final_Overleaf_project_files">The final Overleaf project files</span></h3>
+<p>The following three-file project can now be opened in Overleaf using the links provided above and below the file listings. Note that the <code>latexmkrc</code> file contains the code supplied by John Collins but, for brevity, most of the comments have been removed.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name[]=summary.tex
+&amp;snip[]=%25+This+code+is+derived+from+an+answer+on+tex.stackexchange+%0A%25+%28by+cyberSingularity+at+http%3A%2F%2Ftex.stackexchange.com%2Fa%2F69832%2F226%29%0A%0A%5Cdocumentclass%5B12pt%5D%7Barticle%7D%0A%0A%5Ctitle%7BUsing+the+xr+package+on+Overleaf%7D%0A%0A%25----Helper+code+for+dealing+with+external+references----%0A%25+%28by+cyberSingularity+at+http%3A%2F%2Ftex.stackexchange.com%2Fa%2F69832%2F226%29%0A%0A%5Cusepackage%7Bxr%7D%0A%5Cmakeatletter%0A%0A%5Cnewcommand%2A%7B%5CaddFileDependency%7D%5B1%5D%7B%25+argument%3Dfile+name+and+extension%0A%5Ctypeout%7B%28%231%29%7D%25+latexmk+will+find+this+if+%24recorder%3D0%0A%25+however%2C+in+that+case%2C+it+will+ignore+%231+if+it+is+a+.aux+or+%0A%25+.pdf+file+etc+and+it+exists%21+If+it+doesn%27t+exist%2C+it+will+appear+%0A%25+in+the+list+of+dependents+regardless%29%0A%25%0A%25+Write+the+following+if+you+want+it+to+appear+in+%5Clistfiles+%0A%25+---+although+not+really+necessary+and+latexmk+doesn%27t+use+this%0A%25%0A%5C%40addtofilelist%7B%231%7D%0A%25%0A%25+latexmk+will+find+this+message+if+%231+doesn%27t+exist+%28yet%29%0A%5CIfFileExists%7B%231%7D%7B%7D%7B%5Ctypeout%7BNo+file+%231.%7D%7D%0A%7D%5Cmakeatother%0A%0A%5Cnewcommand%2A%7B%5Cmyexternaldocument%7D%5B1%5D%7B%25%0A%5Cexternaldocument%7B%231%7D%25%0A%5CaddFileDependency%7B%231.tex%7D%25%0A%5CaddFileDependency%7B%231.aux%7D%25%0A%7D%0A%25------------End+of+helper+code--------------%0A%0A%25+put+all+the+external+documents+here%21%0A%5Cmyexternaldocument%7Barticle1%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0AIn+the+file+%5Ctexttt%7Barticle1.tex%7D%2C+the+introduction+is+section+%5Cref%7Bintroduction%7D.++In+that+file%2C+there+are+two+subsections%3A+%5Cref%7Bmathrefs%7D+and+%5Cref%7Bpowers%7D.+In+subsection+%5Cref%7Bpowers%7D%2C+equation+%5Cref%7Beq%3A1%7D+demonstrates+a+power+series.%0A%0A%5Cend%7Bdocument%7D
+&amp;snip_name[]=article1.tex
+&amp;snip[]=%5Cdocumentclass%7Barticle%7D%0A%5Ctitle%7BThis+is+%5Ctexttt%7Barticle1.tex%7D%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BIntroduction%7D%0A%5Clabel%7Bintroduction%7D%0A%0AThis+is+a+standalone+%5CLaTeX%7B%7D+document+with%0Areferences+we+want+to+use+in+%5Ctexttt%7Bsummary.tex%7D.%0A%0A%5Csubsection%7BMath+references%7D%0A%5Clabel%7Bmathrefs%7D%0AAs+mentioned+in+section+%5Cref%7Bintroduction%7D%2C+%0Adifferent+elements+can+be+referenced+within%0Aa+document.%0A%0A%5Csubsection%7BPowers+series%7D%0A%5Clabel%7Bpowers%7D%0A%0A%5Cbegin%7Bequation%7D%0A%5Clabel%7Beq%3A1%7D%0A%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D+a_i+x%5Ei%0A%5Cend%7Bequation%7D%0A%0AEquation+%5Cref%7Beq%3A1%7D+is+a+typical+power+series.%0A%5Cend%7Bdocument%7D
+&amp;snip_name[]=latexmkrc
+&amp;snip[]=%24sub_doc_output+%3D+%27output-subdoc%27%3B%0A%0A%40sub_doc_options+%3D+%28%29%3B%0A%0Apush+%40sub_doc_options%2C+%27-pdf%27%3B+%23+Use+pdflatex+for+compilation+of+external+documents.%0A%23+Replace+%27-pdf%27+by+%27-pdfdvi%27%2C+%27pdfxe%27%2C+or+%27pdflua%27+if+needed.%0A%0Apush+%40file_not_found%2C+%27%5ENo+file%5C%5Cs%2A%28.%2B%29%5Cs%2A%24%27%3B%0A%0Aadd_cus_dep%28+%27tex%27%2C+%27aux%27%2C+0%2C+%27makeexternaldocument%27+%29%3B%0Asub+makeexternaldocument+%7B%0A++++if+%28+%24root_filename+ne+%24_%5B0%5D+%29++%7B%0A++++++++my+%28%24base_name%2C+%24path%29+%3D+fileparse%28+%24_%5B0%5D+%29%3B%0A++++++++pushd+%24path%3B%0A++++++++my+%24return+%3D+system+%22latexmk%22%2C%0A++++++++++++++++++++++++++++%40sub_doc_options%2C%0A++++++++++++++++++++++++++++%22-aux-directory%3D%24sub_doc_output%22%2C%0A++++++++++++++++++++++++++++%22-output-directory%3D%24sub_doc_output%22%2C%0A++++++++++++++++++++++++++++%24base_name%3B%0A++++++++if+%28+%28%24sub_doc_output+ne+%27+%27%29+%26%26+%28%24sub_doc_output+ne+%27.%27%29+%29+%7B%0A%0A+++++++++++++rdb_add_generated%28+%22%24sub_doc_output%2F%24base_name.aux%22+%29%3B%0A+++++++++++++copy+%22%24sub_doc_output%2F%24base_name.aux%22%2C+%22.%22%3B%0A++++++++%7D%0A++++++++popd%3B%0A++++++++return+%24return%3B%0A+++%7D%0A%7D
+&amp;main_document=summary.tex
+"><i class="fa fa-share"></i> Open this three-file example in Overleaf.</a>
+</p>
+<p><strong>summary.tex</strong></p>
+<p class="mw-empty-elt"></p><p>This is our summary file. From within this
+file we want to use cross-references created in external files. Here,
+we want to use labels generated in <code>article1.tex</code>.</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="c">% This code is derived from an answer on tex.stackexchange </span>
+<span class="c">% (by cyberSingularity at http://tex.stackexchange.com/a/69832/226)</span>
+
+<span class="k">\documentclass</span><span class="na">[12pt]</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\title</span><span class="nb">{</span>Using the xr package on Overleaf<span class="nb">}</span>
+
+<span class="c">%----Helper code for dealing with external references----</span>
+<span class="c">% (by cyberSingularity at http://tex.stackexchange.com/a/69832/226)</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>xr<span class="nb">}</span>
+<span class="k">\makeatletter</span>
+
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\addFileDependency</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">% argument=file name and extension</span>
+<span class="k">\typeout</span><span class="nb">{</span>(#1)<span class="nb">}</span><span class="c">% latexmk will find this if $recorder=0</span>
+<span class="c">% however, in that case, it will ignore #1 if it is a .aux or </span>
+<span class="c">% .pdf file etc and it exists! If it doesn't exist, it will appear </span>
+<span class="c">% in the list of dependents regardless)</span>
+<span class="c">%</span>
+<span class="c">% Write the following if you want it to appear in \listfiles </span>
+<span class="c">% --- although not really necessary and latexmk doesn't use this</span>
+<span class="c">%</span>
+<span class="k">\@</span>addtofilelist<span class="nb">{</span>#1<span class="nb">}</span>
+<span class="c">%</span>
+<span class="c">% latexmk will find this message if #1 doesn't exist (yet)</span>
+<span class="k">\IfFileExists</span><span class="nb">{</span>#1<span class="nb">}{}{</span><span class="k">\typeout</span><span class="nb">{</span>No file #1.<span class="nb">}}</span>
+<span class="nb">}</span><span class="k">\makeatother</span>
+
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\myexternaldocument</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\externaldocument</span><span class="nb">{</span>#1<span class="nb">}</span><span class="c">%</span>
+<span class="k">\addFileDependency</span><span class="nb">{</span>#1.tex<span class="nb">}</span><span class="c">%</span>
+<span class="k">\addFileDependency</span><span class="nb">{</span>#1.aux<span class="nb">}</span><span class="c">%</span>
+<span class="nb">}</span>
+<span class="c">%------------End of helper code--------------</span>
+
+<span class="c">% put all the external documents here!</span>
+<span class="k">\myexternaldocument</span><span class="nb">{</span>article1<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+In the file <span class="k">\texttt</span><span class="nb">{</span>article1.tex<span class="nb">}</span>, the introduction is section <span class="k">\ref</span><span class="nb">{</span>introduction<span class="nb">}</span>.  In that file, there are two subsections: <span class="k">\ref</span><span class="nb">{</span>mathrefs<span class="nb">}</span> and <span class="k">\ref</span><span class="nb">{</span>powers<span class="nb">}</span>. In subsection <span class="k">\ref</span><span class="nb">{</span>powers<span class="nb">}</span>, equation <span class="k">\ref</span><span class="nb">{</span>eq:1<span class="nb">}</span> demonstrates a power series.
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p><strong>article1.tex</strong></p>
+<p>This file is 
+one of our articles. Note how it contains various <code>\label</code> 
+commands to create labels that, thanks to the <code>xr</code> package, we can use in the file <code>summary.tex</code>.</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>This is <span class="k">\texttt</span><span class="nb">{</span>article1.tex<span class="nb">}}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>introduction<span class="nb">}</span>
+
+This is a standalone <span class="k">\LaTeX</span><span class="nb">{}</span> document with
+references we want to use in <span class="k">\texttt</span><span class="nb">{</span>summary.tex<span class="nb">}</span>.
+
+<span class="k">\subsection</span><span class="nb">{</span>Math references<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>mathrefs<span class="nb">}</span>
+As mentioned in section <span class="k">\ref</span><span class="nb">{</span>introduction<span class="nb">}</span>, 
+different elements can be referenced within
+a document.
+
+<span class="k">\subsection</span><span class="nb">{</span>Powers series<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>powers<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:1<span class="nb">}</span>
+<span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span><span class="k">\infty</span><span class="nb">}</span> a<span class="nb">_</span>i x<span class="nb">^</span>i
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+Equation <span class="k">\ref</span><span class="nb">{</span>eq:1<span class="nb">}</span> is a typical power series.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p><strong>latexmkrc</strong></p>
+<p>This <code>latexmkrc</code> file contains code to 
+ensure the external files are compiled.</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="s">$</span><span class="nb">sub_doc_output </span><span class="o">=</span><span class="nb"> 'output</span><span class="o">-</span><span class="nb">subdoc';</span>
+
+<span class="nb">@sub_doc_options </span><span class="o">=</span><span class="nb"> </span><span class="o">()</span><span class="nb">;</span>
+
+<span class="nb">push @sub_doc_options, '</span><span class="o">-</span><span class="nb">pdf'; # Use pdflatex for compilation of external documents.</span>
+<span class="nb"># Replace '</span><span class="o">-</span><span class="nb">pdf' by '</span><span class="o">-</span><span class="nb">pdfdvi', 'pdfxe', or 'pdflua' if needed.</span>
+
+<span class="nb">push @file_not_found, '^No file</span><span class="nv">\\</span><span class="nb">s</span><span class="o">*(</span><span class="nb">.</span><span class="o">+)</span><span class="nv">\s</span><span class="o">*</span><span class="s">$</span>';
+
+add<span class="nb">_</span>cus<span class="nb">_</span>dep( 'tex', 'aux', 0, 'makeexternaldocument' );
+sub makeexternaldocument <span class="nb">{</span>
+    if ( <span class="s">$</span><span class="nb">root_filename ne </span><span class="s">$</span><span class="nb">_</span>[0] )  <span class="nb">{</span>
+        my (<span class="s">$</span><span class="nb">base_name, </span><span class="s">$</span>path) = fileparse( <span class="s">$</span><span class="nb">_</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="nb"> </span><span class="o">)</span><span class="nb">;</span>
+<span class="nb">        pushd </span><span class="s">$</span>path;
+        my <span class="s">$</span><span class="nb">return </span><span class="o">=</span><span class="nb"> system "latexmk",</span>
+<span class="nb">                            @sub_doc_options,</span>
+<span class="nb">                            "</span><span class="o">-</span><span class="nb">aux</span><span class="o">-</span><span class="nb">directory</span><span class="o">=</span><span class="s">$</span>sub<span class="nb">_</span>doc<span class="nb">_</span>output",
+                            "-output-directory=<span class="s">$</span><span class="nb">sub_doc_output",</span>
+<span class="nb">                            </span><span class="s">$</span>base<span class="nb">_</span>name;
+        if ( (<span class="s">$</span><span class="nb">sub_doc_output ne ' '</span><span class="o">)</span><span class="nb"> &amp;&amp; </span><span class="o">(</span><span class="s">$</span>sub<span class="nb">_</span>doc<span class="nb">_</span>output ne '.') ) <span class="nb">{</span>
+
+             rdb<span class="nb">_</span>add<span class="nb">_</span>generated( "<span class="s">$</span><span class="nb">sub_doc_output</span><span class="o">/</span><span class="s">$</span>base<span class="nb">_</span>name.aux" );
+             copy "<span class="s">$</span><span class="nb">sub_doc_output</span><span class="o">/</span><span class="s">$</span>base<span class="nb">_</span>name.aux", ".";
+        <span class="nb">}</span>
+        popd;
+        return <span class="s">$</span><span class="nb">return;</span>
+<span class="nb">   }</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name[]=summary.tex
+&amp;snip[]=%25+This+code+is+derived+from+an+answer+on+tex.stackexchange+%0A%25+%28by+cyberSingularity+at+http%3A%2F%2Ftex.stackexchange.com%2Fa%2F69832%2F226%29%0A%0A%5Cdocumentclass%5B12pt%5D%7Barticle%7D%0A%0A%5Ctitle%7BUsing+the+xr+package+on+Overleaf%7D%0A%0A%25----Helper+code+for+dealing+with+external+references----%0A%25+%28by+cyberSingularity+at+http%3A%2F%2Ftex.stackexchange.com%2Fa%2F69832%2F226%29%0A%0A%5Cusepackage%7Bxr%7D%0A%5Cmakeatletter%0A%0A%5Cnewcommand%2A%7B%5CaddFileDependency%7D%5B1%5D%7B%25+argument%3Dfile+name+and+extension%0A%5Ctypeout%7B%28%231%29%7D%25+latexmk+will+find+this+if+%24recorder%3D0%0A%25+however%2C+in+that+case%2C+it+will+ignore+%231+if+it+is+a+.aux+or+%0A%25+.pdf+file+etc+and+it+exists%21+If+it+doesn%27t+exist%2C+it+will+appear+%0A%25+in+the+list+of+dependents+regardless%29%0A%25%0A%25+Write+the+following+if+you+want+it+to+appear+in+%5Clistfiles+%0A%25+---+although+not+really+necessary+and+latexmk+doesn%27t+use+this%0A%25%0A%5C%40addtofilelist%7B%231%7D%0A%25%0A%25+latexmk+will+find+this+message+if+%231+doesn%27t+exist+%28yet%29%0A%5CIfFileExists%7B%231%7D%7B%7D%7B%5Ctypeout%7BNo+file+%231.%7D%7D%0A%7D%5Cmakeatother%0A%0A%5Cnewcommand%2A%7B%5Cmyexternaldocument%7D%5B1%5D%7B%25%0A%5Cexternaldocument%7B%231%7D%25%0A%5CaddFileDependency%7B%231.tex%7D%25%0A%5CaddFileDependency%7B%231.aux%7D%25%0A%7D%0A%25------------End+of+helper+code--------------%0A%0A%25+put+all+the+external+documents+here%21%0A%5Cmyexternaldocument%7Barticle1%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0AIn+the+file+%5Ctexttt%7Barticle1.tex%7D%2C+the+introduction+is+section+%5Cref%7Bintroduction%7D.++In+that+file%2C+there+are+two+subsections%3A+%5Cref%7Bmathrefs%7D+and+%5Cref%7Bpowers%7D.+In+subsection+%5Cref%7Bpowers%7D%2C+equation+%5Cref%7Beq%3A1%7D+demonstrates+a+power+series.%0A%0A%5Cend%7Bdocument%7D
+&amp;snip_name[]=article1.tex
+&amp;snip[]=%5Cdocumentclass%7Barticle%7D%0A%5Ctitle%7BThis+is+%5Ctexttt%7Barticle1.tex%7D%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BIntroduction%7D%0A%5Clabel%7Bintroduction%7D%0A%0AThis+is+a+standalone+%5CLaTeX%7B%7D+document+with%0Areferences+we+want+to+use+in+%5Ctexttt%7Bsummary.tex%7D.%0A%0A%5Csubsection%7BMath+references%7D%0A%5Clabel%7Bmathrefs%7D%0AAs+mentioned+in+section+%5Cref%7Bintroduction%7D%2C+%0Adifferent+elements+can+be+referenced+within%0Aa+document.%0A%0A%5Csubsection%7BPowers+series%7D%0A%5Clabel%7Bpowers%7D%0A%0A%5Cbegin%7Bequation%7D%0A%5Clabel%7Beq%3A1%7D%0A%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D+a_i+x%5Ei%0A%5Cend%7Bequation%7D%0A%0AEquation+%5Cref%7Beq%3A1%7D+is+a+typical+power+series.%0A%5Cend%7Bdocument%7D
+&amp;snip_name[]=latexmkrc
+&amp;snip[]=%24sub_doc_output+%3D+%27output-subdoc%27%3B%0A%0A%40sub_doc_options+%3D+%28%29%3B%0A%0Apush+%40sub_doc_options%2C+%27-pdf%27%3B+%23+Use+pdflatex+for+compilation+of+external+documents.%0A%23+Replace+%27-pdf%27+by+%27-pdfdvi%27%2C+%27pdfxe%27%2C+or+%27pdflua%27+if+needed.%0A%0Apush+%40file_not_found%2C+%27%5ENo+file%5C%5Cs%2A%28.%2B%29%5Cs%2A%24%27%3B%0A%0Aadd_cus_dep%28+%27tex%27%2C+%27aux%27%2C+0%2C+%27makeexternaldocument%27+%29%3B%0Asub+makeexternaldocument+%7B%0A++++if+%28+%24root_filename+ne+%24_%5B0%5D+%29++%7B%0A++++++++my+%28%24base_name%2C+%24path%29+%3D+fileparse%28+%24_%5B0%5D+%29%3B%0A++++++++pushd+%24path%3B%0A++++++++my+%24return+%3D+system+%22latexmk%22%2C%0A++++++++++++++++++++++++++++%40sub_doc_options%2C%0A++++++++++++++++++++++++++++%22-aux-directory%3D%24sub_doc_output%22%2C%0A++++++++++++++++++++++++++++%22-output-directory%3D%24sub_doc_output%22%2C%0A++++++++++++++++++++++++++++%24base_name%3B%0A++++++++if+%28+%28%24sub_doc_output+ne+%27+%27%29+%26%26+%28%24sub_doc_output+ne+%27.%27%29+%29+%7B%0A%0A+++++++++++++rdb_add_generated%28+%22%24sub_doc_output%2F%24base_name.aux%22+%29%3B%0A+++++++++++++copy+%22%24sub_doc_output%2F%24base_name.aux%22%2C+%22.%22%3B%0A++++++++%7D%0A++++++++popd%3B%0A++++++++return+%24return%3B%0A+++%7D%0A%7D
+&amp;main_document=summary.tex
+"><i class="fa fa-share"></i> Open this three-file example in Overleaf.</a>
+</p><p>The following graphic is an annotated version of the output from typesetting <code>summary.tex</code>, showing the cross-references and the corresponding labels from the external file <code>article1.tex</code>. 
+</p>
+<p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6dWgrF8BBtGG3BrJpWX5EC/dff37a3dfac45be1bbc09b2c2a65bbe0/ExternalRefs2--plain.svg" alt="Showing references imported from an external file" style="width:75%" />
+
+</p>
+<h2><span class="mw-headline" id="A_note_about_syntax_errors">A note about syntax errors</span></h2>
+<p>For your main project file, you can use Overleaf’s <a href="Using_the_Stop_on_First_Error_compilation_mode.html" title="Kb/Using the Stop on First Error compilation mode">Stop on First Error compilation mode</a> to ensure compilation terminates immediately upon detection of the first error. This can help isolate and identify errors in your code, rather than allowing errors to cascade, making it far more difficult to find and debug problems. 
+</p><p>The <em>external</em> documents are compiled automatically via the <code>latexmkrc</code> file; consequently, any LaTeX syntax errors within them won’t show in the Overleaf interface—unless you recompile them in Overleaf too. Errors in those external files could prevent cross-references from appearing correctly in the typeset PDF file, so we strongly recommend checking and correcting any such errors as soon as they occur.
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../latex/Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="Creating_a_document_in_Overleaf.html" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="Uploading_a_project.html" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="Copying_a_project.html" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="Creating_a_project_from_a_template.html" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="Using_the_Overleaf_project_menu.html" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="Including_images_on_Overleaf.html" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="Exporting_your_work_from_Overleaf.html" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="Working_Offline_in_Overleaf.html" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="Track_Changes_in_Overleaf.html" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="Using_bibliographies_on_Overleaf.html" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="Sharing_a_project.html" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../latex/Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="Fixing_and_preventing_compile_timeouts.html" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="../how-to.html" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="Overleaf_premium_features.html" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../latex/Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../latex/Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../latex/Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../latex/Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../latex/Lists.html" title="Lists">Lists</a></li>
+<li><a href="../latex/Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../latex/Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../latex/Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../latex/Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../latex/Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../latex/Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../latex/Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../latex/Operators.html" title="Operators">Operators</a></li>
+<li><a href="../latex/Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../latex/Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../latex/Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../latex/List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../latex/Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="Using_the_Symbol_Palette_in_Overleaf.html">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../latex/Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../latex/Tables.html" title="Tables">Tables</a></li>
+<li><a href="../latex/Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../latex/Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../latex/Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../latex/TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../latex/Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../latex/Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../latex/Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../latex/Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../latex/Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../latex/Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../latex/Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../latex/Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../latex/Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../latex/International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../latex/Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../latex/Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../latex/Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../latex/French.html" title="French">French</a></li>
+<li><a href="../latex/German.html" title="German">German</a></li>
+<li><a href="../latex/Greek.html" title="Greek">Greek</a></li>
+<li><a href="../latex/Italian.html" title="Italian">Italian</a></li>
+<li><a href="../latex/Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../latex/Korean.html" title="Korean">Korean</a></li>
+<li><a href="../latex/Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../latex/Russian.html" title="Russian">Russian</a></li>
+<li><a href="../latex/Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../latex/Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../latex/Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../latex/Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../latex/Indices.html" title="Indices">Indices</a></li>
+<li><a href="../latex/Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../latex/Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../latex/Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../latex/Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../latex/Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../latex/Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../latex/Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../latex/Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../latex/Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../latex/Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../latex/Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../latex/Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../latex/Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../latex/Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../latex/Counters.html" title="Counters">Counters</a></li>
+<li><a href="../latex/Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../latex/Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../latex/Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../latex/Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../latex/Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../latex/Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../latex/Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../latex/XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../latex/Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../latex/Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../latex/Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../latex/Commands.html" title="Commands">Commands</a></li>
+<li><a href="../latex/Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../latex/Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../latex/Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../latex/Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../latex/Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../latex/Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../latex/Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../latex/CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../latex/Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../latex/Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../latex/Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../latex/Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../latex/Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../latex/Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../latex/Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../latex/Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../latex/Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="../../about.html">About us</a></li><li><a href="../../about/values.html">Our values</a></li><li><a href="../../about/careers.html">Careers</a></li><li><a href="../../for/press.html">Press &amp; awards</a></li><li><a href="../../blog.html">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../latex/Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="../../latex/templates.html">Templates</a></li><li><a href="../../events/webinars.html">Webinars</a></li><li><a href="../latex/Tutorials.html">Tutorials</a></li><li><a href="../latex/Inserting_Images.html">How to insert images</a></li><li><a href="../latex/Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="Overleaf_premium_features.html">Premium features</a></li><li><a href="../../user/subscription/plansb6c4.html?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="../../for/enterprises.html">For enterprise</a></li><li><a href="../../for/universities.html">For universities</a></li><li><a href="../../user/subscription/plans388e.html?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="../../for/community/advisors.html">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="../../about/why-latex.html">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="../../contact.html">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="../../legal.html">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Cross_referencing_with_the_xr_package_in_Overleaf.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="../../legal.html#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="../how-to.html" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==" src="https://cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="KZI0cnK2Gjuyr6d9g+NoNg==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 12:35:39 GMT -->
+</html>
