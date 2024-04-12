@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{graphicx}% Required for inserting images
+\graphicspath{{./images/}}
+
+
+
+\title{Conic Sections}
+\author{23b1064}
+\date{\today}
+
+\begin{document}
+
+% preamble
+\maketitle
+% below line auto generates the table of contents
+\tableofcontents
+\clearpage
+
+% section --1
+\section{Introduction}
+% Introduction section %
+A conic section, conic or a quadratic curve is a curve obtained from a cone’s surface intersecting a plane. The conic sections in the Euclidean plane have various distinguishing properties, many of which can be used as alternative definitions.
+% paragraph
+\section{Types of Conic Section}
+% section --2
+This section explains two types of conic sections.
+\begin{itemize}
+	\item \textbf{Ellipse}\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.35\textwidth]{Ellipse.png}
+		\label{ellipse}
+		\caption[short]{Ellipse}
+	\end{figure}\\
+	An ellipse is a plane curve surrounding two focal points, such that for all
+	points on the curve, the sum of the two distances to the focal points is a
+	constant
+	\item \textbf{Parabola}\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics*[width=0.3\textwidth]{parabola.png}
+		\label{parabola}
+		\caption[short]{Parabola}
+	\end{figure}\\
+	A parabola is a plane curve which is mirror-symmetrical and is approximately U-shaped
+\end{itemize}
+
+% Types of conic section with lists and figures
+% paragraph
+% unordered list containing figures and content
+
+% section --3
+\section{Properties}
+This section contains the equations for various conic sections and various parameter values.
+% Properties section
+%paragraph
+% Need to use either equation or display math for equations
+% subsection --3.1
+\subsection{Equations}
+\begin{itemize}
+	\item \textbf{Ellipse}
+	The equation for ellipse in figure 1 is 
+	\begin{equation}
+		\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+	\end{equation}
+	\item \textbf{Parabola}
+	The equation for ellipse in figure 2 is
+	\begin{equation}
+		y^2 = 4ax
+	\end{equation}
+	with $a > 0$
+\end{itemize}
+% unordered list of equations and content
+% subsection --3.2
+\subsection{Parameters}
+\begin{tabular}{|c|c|c|}
+	\hline
+	Conic section type & Eccentricity & Semilatus rectum \\
+	\hline
+	Ellipse & $\sqrt{1-\frac{b^2}{a^2}}$ & $\frac{b^2}{a}$ \\
+	Parabola & 1 & $2a$ \\
+	\hline
+\end{tabular}
+% tablular code
+
+\end{document}
+
